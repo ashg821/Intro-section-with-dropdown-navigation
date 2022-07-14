@@ -52,6 +52,14 @@ a {
     font-size: 14px;
 }
 
+li img{
+    margin: 0 5px;
+}
+
+a i{
+    margin-left: 8px;
+}
+
 /* #navBar a {
 } */
 
@@ -288,6 +296,7 @@ li {
 
 #brandLogos img {
     object-fit: contain;
+    width: 70px;
 }
 
 @media screen and (max-width:890px) {
