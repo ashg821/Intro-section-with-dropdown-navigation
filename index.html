@@ -1,39 +1,68 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
+
   <title>Frontend Mentor | Intro section with dropdown navigation</title>
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
+  <link rel="stylesheet" href="styles.css">
+
 </head>
+
 <body>
-
-  Features
-  Company
-  Careers
-  About
-
-  Login
-  Register
-
-  Make remote work
-
-  Get your team in sync, no matter your location. Streamline processes, 
-  create team rituals, and watch productivity soar.
-
-  Learn more
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
+  <nav id="navBar">
+    <div id="navContainer-1">
+      <img src="images/logo.svg" id="brandName">
+      <ul id="navList">
+        <li class="dropdownLink"><a href="#">Features <i class="fa-solid fa-angle-down" id="featureDown"
+              style="margin-left: 8px;"></i><i class="fa-solid fa-angle-up" id="featureUp"
+              style="margin-left: 8px;"></i></a></li>
+        <li class="dropdownLink"><a href="#">Company <i class="fa-solid fa-angle-down" id="companyDown"
+              style="margin-left: 8px;"></i><i class="fa-solid fa-angle-up" id="companyUp"
+              style="margin-left: 8px;"></i></a></li>
+        <li><a href="#">Careers</a></li>
+        <li><a href="#">About</a></li>
+      </ul>
+    </div>
+    <div id="navContainer-2">
+      <a href="#">Login</a>
+      <a href="#" id="navRegister">Register</a>
+    </div>
+    <img src="./images/icon-menu.svg" id="toggleIcon">
+  </nav>
+  <div id="dropdownContainer">
+    <div class="dropdown" id="dropdown-1">
+      <ul>
+        <li><img src="./images/icon-todo.svg" style="margin: 0 5px;"><a href="#">Todo List</a></li>
+        <li><img src="./images/icon-calendar.svg" style="margin: 0 5px;"><a href="#">Calender</a></li>
+        <li><img src="./images/icon-reminders.svg" style="margin: 0 5px;"><a href="#">Reminder</a></li>
+        <li><img src="./images/icon-planning.svg" style="margin: 0 5px;"><a href="#">Planning</a></li>
+      </ul>
+    </div>
+    <div class="dropdown" id="dropdown-2">
+      <ul>
+        <li><a href="#">History</a></li>
+        <li><a href="#">Our Team</a></li>
+        <li><a href="#">Blog</a></li>
+      </ul>
+    </div>
   </div>
+  <div id="filterDiv"></div>
+  <nav id="sideNav">
+    
+  </nav>
+  <main id="container"></main>
+  <section id="content">
+
+  </section>
+  <section id="image"></section>
+  <script src="app.js"></script>
+  <script src="https://kit.fontawesome.com/102a09cb88.js" crossorigin="anonymous"></script>
 </body>
+
 </html>
