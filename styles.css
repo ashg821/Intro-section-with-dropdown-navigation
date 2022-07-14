@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Epilogue&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Epilogue:wght@500&display=swap');
 
 :root {
     --almostWhite: hsl(0, 0%, 98%);
@@ -130,9 +130,9 @@ li {
 }
 
 #filterDiv {
-    position: absolute;
+    position: fixed;
     top: 0;
-    width: 100%;
+    width: 100vh;
     height: 100%;
     background-color: black;
     z-index: 1;
@@ -141,7 +141,7 @@ li {
 }
 
 #sideNav {
-    position: absolute;
+    position: fixed;
     top: 0;
     right: 0;
     background-color: var(--almostWhite);
@@ -152,17 +152,17 @@ li {
     display: none;
 }
 
-#iconParent{
+#iconParent {
     position: relative;
 }
 
-#closeIcon{
+#closeIcon {
     position: absolute;
     right: 0;
     margin: 20px 20px
 }
 
-#navList2{
+#navList2 {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -173,11 +173,11 @@ li {
     padding-bottom: 0;
 }
 
-#navList2 li{
+#navList2 li {
     margin: 10px 0;
 }
 
-#navContainerB-2{
+#navContainerB-2 {
     height: 90px;
     display: flex;
     flex-direction: column;
@@ -185,29 +185,112 @@ li {
     justify-content: space-around;
 }
 
-#navRegister2{
+#navRegister2 {
     border: 2px solid var(--mediumGray);
     border-radius: 10px;
     padding: 10px 40px;
 }
 
-.dropdown2{
+.dropdown2 {
     width: 100%;
     display: none;
 }
-.dropdown2 ul{
+
+.dropdown2 ul {
     display: flex;
-    flex-direction:column;
+    flex-direction: column;
     align-items: center;
     margin: auto;
 }
 
-#dropdownB-1 ul li{
+#dropdownB-1 ul li {
     display: flex;
     align-items: flex-end;
 }
 
-@media screen and (max-width:800px) {
+#container {
+    display: flex;
+    width: 80vw;
+    margin: 40px auto;
+    justify-content: space-between;
+}
+
+#content {
+    width: 40%;
+    height: 75vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+#image {
+    position: relative;
+    width: 60%;
+    height: 75vh;
+    margin-left: 200px;
+}
+
+#hero-image-desktop {
+    position: absolute;
+    left: 5%;
+    width: 100%;
+    height: 100%;
+    object-fit: contain/cover;
+}
+
+#hero-image-mobile {
+    display: none;
+}
+
+#contentContainer {
+    margin-top: 80px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 62%;
+}
+
+#contentTitle {
+    font-weight: bolder;
+    font-size: 65px;
+    white-space: pre;
+}
+
+#contentPara {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+    color: var(--mediumGray);
+    white-space: pre;
+}
+
+#contentBtn {
+    color: white;
+    font-weight: 600;
+    background-color: var(--almostBlack);
+    padding: 15px 10px;
+    width: 100px;
+    text-align: center;
+    border-radius: 10px;
+    border: 1px solid var(--almostBlack);
+
+}
+
+#contentBtn:hover {
+    color: var(--almostBlack);
+    background-color: transparent;
+}
+
+#brandLogos {
+    display: flex;
+    justify-content: space-between;
+}
+
+#brandLogos img {
+    object-fit: contain;
+}
+
+@media screen and (max-width:890px) {
     #navList {
         display: none;
     }
@@ -219,4 +302,69 @@ li {
     #toggleIcon {
         display: inline;
     }
+
+    #container {
+        flex-direction: column-reverse;
+        width: 100vw;
+        height: 80vh;
+        margin: 20px 0;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    #image {
+        margin: 0;
+        width: 100%;
+        height: 40%;
+    }
+
+    #hero-image-desktop {
+        display: none;
+    }
+
+    #hero-image-mobile {
+        display: inline;
+        width: 100%;
+        height: 100%;
+        object-fit: fill;
+    }
+
+    #content {
+        width: 100%;
+        height: 60%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    #contentContainer {
+        margin-top: 40px;
+        justify-content: space-between;
+        align-items: center;
+        height: 65%;
+        width: 90%;
+    }
+
+    #contentTitle {
+        font-weight: bolder;
+        font-size: 33px;
+        white-space: normal;
+    }
+
+    #contentPara {
+        text-align: center;
+        white-space: normal;
+    }
+
+    #brandLogos {
+        width: 90%;
+        margin-top: 50px;
+    }
+
+    #brandLogos img{
+        width: 60px;
+    }
+    
+
 }
